@@ -1,12 +1,22 @@
 import Yachiyo_info
 import os
-print(os.getcwd())
+
 \
 \
 \
 \
 \
+##str = string
+##int = number with out decimal
+##Floats = number with decimal
+##list
+##tuples = tup()
+##list = []
+##sets = set{}
+list = [1,2,3,4,]
+print(list())
 ##CREATE FILE, DIR
+#print(os.getcwd())
 # os.removedirs("you're/yuri")
 # os.makedirs("you're/yuri")
 # os.remove("you're.")
