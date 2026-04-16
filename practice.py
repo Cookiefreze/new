@@ -1,6 +1,12 @@
 import Yachiyo_info
 import os
 print(os.getcwd())
+\
+\
+\
+\
+\
+##CREATE FILE, DIR
 # os.removedirs("you're/yuri")
 # os.makedirs("you're/yuri")
 # os.remove("you're.")
@@ -16,16 +22,29 @@ print(os.getcwd())
 # os.chdir("/workspaces/new")
 # for range in welcome:
 #     print(welcome.index(1, range), range)
-n1 =open('exemple.txt', 'w')
-n2 =open('exemple2.txt', 'w')
-n1.close(),n2.close()
-with open('exemple.txt', 'r+') as nu1, open('exemple2.txt', 'w')as nu2:
-    nu1.write('test exemple')
-    nu2.seek(0)
-    sizen2 = 1
-    whatisreading = nu1.read(sizen2)
-    while len(whatisreading)>0:
-        print(whatisreading,end='')
-        nu2.write(whatisreading)
-        whatisreading = nu1.read(sizen2)
+\
+\
+\
+\
+# #FILE TXT READ
+# n1 =open('exemple.txt', 'w')
+# n2 =open('exemple2.txt', 'w')
+# n1.close(),n2.close()
+# # Encoding is the rule that converts text characters to bytes (for saving)
+# #  and bytes back to text (for reading).
+# #UTF-8: supports basically all languages and symbols, most recommended default.
+# with open('exemple.txt', 'w+', encoding='utf-8') as nu1, open('exemple2.txt', 'w', encoding='utf-8')as nu2:
+#     nu1.write('test exemple')
+#     nu1.seek(0)
+#     sizen2 = 1
+#     whatisreading = nu1.read(sizen2)
+#     while len(whatisreading)>0:
+#         print(whatisreading,end='')
+#         nu2.write(whatisreading)
+#         whatisreading = nu1.read(sizen2)
+\
+\
+\
+\
+\
 
