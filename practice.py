@@ -14,7 +14,7 @@ import os
 ##list = []
 ##sets = set{}
 list = [1,2,3,4,]
-print(list())
+print(list)
 ##CREATE FILE, DIR
 #print(os.getcwd())
 # os.removedirs("you're/yuri")
@@ -53,8 +53,26 @@ print(list())
 #         nu2.write(whatisreading)
 #         whatisreading = nu1.read(sizen2)
 \
-\
+#.join to join a str and a another str that repeat for each string
 \
 \
 \
 
+with open('exemple1.txt', 'w+', encoding='utf-8') as my_file, open('exemple2.txt', 'w+', encoding='utf-8') as my_result:
+    #/n for next line
+    my_file.write('hello my name is\nbye\nhello again\n')
+    my_file.seek(0)
+
+    lf = 'hello'
+    # To unpack the line number and it text, chose the starting number that it count
+    for i, line in enumerate(my_file, start=1):
+    #  i = which line, line = all the text of the line
+    #this is for the line str
+    #for line in my_file:
+
+        if lf in line:
+           i = str(i)
+           #                     line contain a /n, so dont need to add one
+           #f"{var1}...{var2}" it write the variable  
+           my_result.write(f"{i} {line.strip()}")
+           print(i, line, end='')
