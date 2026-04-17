@@ -13,8 +13,8 @@ import os
 ##tuples = tup()
 ##list = []
 ##sets = set{}
-list = [1,2,3,4,]
-print(list)
+# list = [1,2,3,4,]
+# print(list)
 ##CREATE FILE, DIR
 #print(os.getcwd())
 # os.removedirs("you're/yuri")
@@ -78,16 +78,46 @@ print(list)
 #            #since line has a /n, it takes end='' for not having a space
 #            print(i, line, end='')
 #USER ACCOUNT
-with open('accounts', 'w+'):
-    pass
+# for 1 number of the line, 2 the words in the line in the_file 
+
 def create_account(username,password,email):
-    with open('accounts','w') as create:
-        create.write(f"user name: {username}    password: {password}    email: {email}"/n)
+    with open('accounts','r+', encoding='utf-8') as create:
+        info = create.read()
+        #strip() to remove all extra space of the end and start
+        #replace("what do you want to replace", "with what")
+        # "".join(text.split())   
+        #.split() to make each word have a space and identifying each of them
+        all = info.split()
+        
+
+        if  username in all:
+            
+            return print("Username already exist")
+        if email in all:
+            return print("email already exist")
+        create.write(f"{username}   {email}   {password}""\n")
+        return print("Created")
 def login(email,password):
-    with open('accounts','r') as account:
-        for line, find_user in enumerate(account, start = 1):
-            if find_user == email:
-                where_is_password = find_user.find(password)
-                print(where_is_password)
-create_account('cookie,','cookie123','cookiefre@gmail.com')
-login('cookiefreze@gmail.com','cookie123')
+    with open('accounts','r',encoding='utf-8') as account:
+        #readline to read the line, and readlines to read every line
+        readline = account.readlines()
+        print(readline)
+        print('in')
+        for line_num,user_info in enumerate(readline, start=1):
+            # print(line_num,user_info.strip())
+            if email in user_info.strip():
+                print("found email")
+                find = user_info.split()
+                #all lists, sets, dicts, tuples start their number at 0
+                username,useremail,userpassword = find[0],find[1],find[2]
+                print(len(find))
+                #len starts a 1, not 0
+                if len(find) < 3:
+                    continue
+                if userpassword == password:
+                    return print("Login succesful")
+            
+        return print("email or password invalid")
+# create_account('cookie','cookie123','cookiefre@gmail.com')
+
+# login('cookiefre@gmail.com','cookie123')
