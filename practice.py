@@ -58,21 +58,36 @@ print(list)
 \
 \
 
-with open('exemple1.txt', 'w+', encoding='utf-8') as my_file, open('exemple2.txt', 'w+', encoding='utf-8') as my_result:
-    #/n for next line
-    my_file.write('hello my name is\nbye\nhello again\n')
-    my_file.seek(0)
+# with open('exemple1.txt', 'w+', encoding='utf-8') as my_file, open('exemple2.txt', 'w+', encoding='utf-8') as my_result:
+#     #/n for next line
+#     my_file.write('hello my name is\nbye\nhello again\n')
+#     my_file.seek(0)
 
-    lf = 'hello'
-    # To unpack the line number and it text, chose the starting number that it count
-    for i, line in enumerate(my_file, start=1):
-    #  i = which line, line = all the text of the line
-    #this is for the line str
-    #for line in my_file:
+#     lf = 'hello'
+#     # To unpack the line number and it text, chose the starting number that it count
+#     for i, line in enumerate(my_file, start=1):
+#     #  i = which line, line = all the text of the line
+#     #this is for the line str
+#     #for line in my_file:
 
-        if lf in line:
-           i = str(i)
-           #                     line contain a /n, so dont need to add one
-           #f"{var1}...{var2}" it write the variable  
-           my_result.write(f"{i} {line.strip()}")
-           print(i, line, end='')
+#         if lf in line:
+#            i = str(i)
+#            #                     line contain a /n, so dont need to add one
+#            #f"{var1}...{var2}" it write the variable  
+#            my_result.write(f"{i} {line.strip()}")
+#            #since line has a /n, it takes end='' for not having a space
+#            print(i, line, end='')
+#USER ACCOUNT
+with open('accounts', 'w+'):
+    pass
+def create_account(username,password,email):
+    with open('accounts','w') as create:
+        create.write(f"user name: {username}    password: {password}    email: {email}"/n)
+def login(email,password):
+    with open('accounts','r') as account:
+        for line, find_user in enumerate(account, start = 1):
+            if find_user == email:
+                where_is_password = find_user.find(password)
+                print(where_is_password)
+create_account('cookie,','cookie123','cookiefre@gmail.com')
+login('cookiefreze@gmail.com','cookie123')
