@@ -65,7 +65,11 @@ import os
 
 #     lf = 'hello'
 #     # To unpack the line number and it text, chose the starting number that it count
-#     for i, line in enumerate(my_file, start=1):
+#     #readlines to read all the file
+#     words = my_file.readlines() #if you use readline, it will only read one line
+#     #using my_file.readlines, you can search word by word
+#     #if you use READLINE with out the s, it will read letter by letter
+#     for i, line in enumerate(words, start=1):
 #     #  i = which line, line = all the text of the line
 #     #this is for the line str
 #     #for line in my_file:
@@ -75,49 +79,73 @@ import os
 #            #                     line contain a /n, so dont need to add one
 #            #f"{var1}...{var2}" it write the variable  
 #            my_result.write(f"{i} {line.strip()}")
-#            #since line has a /n, it takes end='' for not having a space
+#            #since line has a /n, it takes end='' for not having a hole new line
 #            print(i, line, end='')
-#USER ACCOUNT
-# for 1 number of the line, 2 the words in the line in the_file 
+\
+\
+\
+\
+\
+# #USER ACCOUNT
+# # for 1 number of the line, 2 the words in the line in the_file 
 
-def create_account(username,password,email):
-    with open('accounts','r+', encoding='utf-8') as create:
-        info = create.read()
-        #strip() to remove all extra space of the end and start
-        #replace("what do you want to replace", "with what")
-        # "".join(text.split())   
-        #.split() to make each word have a space and identifying each of them
-        all = info.split()
+# def create_account(username,password,email):
+#     with open('accounts','r+', encoding='utf-8') as create:
+#         info = create.read()
+#         #strip() to remove all extra space of the end and start
+#         #replace("what do you want to replace", "with what")
+#         # "".join(text.split())   
+#         #.split() to make each word have a space and identifying each of them
+#         all = info.split()
         
-
-        if  username in all:
+#         #if the object is in the list:
+#         if  username in all:
             
-            return print("Username already exist")
-        if email in all:
-            return print("email already exist")
-        create.write(f"{username}   {email}   {password}""\n")
-        return print("Created")
-def login(email,password):
-    with open('accounts','r',encoding='utf-8') as account:
-        #readline to read the line, and readlines to read every line
-        readline = account.readlines()
-        print(readline)
-        print('in')
-        for line_num,user_info in enumerate(readline, start=1):
-            # print(line_num,user_info.strip())
-            if email in user_info.strip():
-                print("found email")
-                find = user_info.split()
-                #all lists, sets, dicts, tuples start their number at 0
-                username,useremail,userpassword = find[0],find[1],find[2]
-                print(len(find))
-                #len starts a 1, not 0
-                if len(find) < 3:
-                    continue
-                if userpassword == password:
-                    return print("Login succesful")
+#             return print("Username already exist")
+#         if email in all:
+#             return print("email already exist")
+#         create.write(f"{username}   {email}   {password}""\n")
+#         return print("Created")
+# def login(email,password):
+#     with open('accounts','r',encoding='utf-8') as account:
+#         #readline to read the line, and readlines to read every line
+#         readline = account.readlines()
+#         print(readline)
+#         print('in')
+#         for line_num,user_info in enumerate(readline, start=1):
+#             # print(line_num,user_info.strip())
+#             if email in user_info.strip():
+#                 print("found email")
+#                 find = user_info.split()
+#                 #all lists, sets, dicts, tuples start their number at 0
+#                 username,useremail,userpassword = find[0],find[1],find[2]
+#                 print(len(find))
+#                 #len starts a 1, not 0
+#                 if len(find) < 3:
+#                     continue
+#                 if userpassword == password:
+#                     return print("Login succesful")
             
-        return print("email or password invalid")
-# create_account('cookie','cookie123','cookiefre@gmail.com')
+#         return print("email or password invalid")
+# # create_account('cookie','cookie123','cookiefre@gmail.com')
 
-# login('cookiefre@gmail.com','cookie123')
+# # login('cookiefre@gmail.com','cookie123')
+\
+\
+##simple terminal commands
+# python: to look pyhton file, or you can write the path
+#   import sys, sys:system
+#       sys.executable: where is the file
+#       sys.version: python version
+#   import pip, pip: package
+#       pip install (package_name): download a package
+#       pip show (package_name): information of the
+# # 
+\
+\
+\
+import datetime
+today = datetime.datetime.now()
+#"%A": telling the week of the day
+extra_format = today.strftime("%A,")
+print(today)
