@@ -1,0 +1,11 @@
+name1, username1, user1@example.com, Pass1234!
+name2, username2, user2@example.com, SunRise2024#
+name3, username3, user3@example.com, BlueSky88$
+name4, username4, user4@example.com, RiverFlow77!
+name5, username5, user5@example.com, MoonLight55@
+name6, username6, user6@example.com, GreenLeaf33#
+name7, username7, user7@example.com, StarDust11$
+name8, username8, user8@example.com, CloudNine99!
+name9, username9, user9@example.com, FireSpark66@
+name10, username10, user10@example.com, OceanWave44#
+

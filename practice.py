@@ -16,6 +16,8 @@ import os
 # list = [1,2,3,4,]
 # print(list)
 ##CREATE FILE, DIR
+##os.getcwd : get file path
+##os.chdir : chose dir
 #print(os.getcwd())
 # os.removedirs("you're/yuri")
 # os.makedirs("you're/yuri")
@@ -87,10 +89,10 @@ import os
 \
 \
 # #USER ACCOUNT
-# # for 1 number of the line, 2 the words in the line in the_file 
-
+# # for 1var: number of the line, 2var: the words in the line in the_file 
+# # for 1var,2var in the_file:...
 # def create_account(username,password,email):
-#     with open('accounts','r+', encoding='utf-8') as create:
+#     with open('accounts.txt','r+', encoding='utf-8') as create:
 #         info = create.read()
 #         #strip() to remove all extra space of the end and start
 #         #replace("what do you want to replace", "with what")
@@ -107,7 +109,7 @@ import os
 #         create.write(f"{username}   {email}   {password}""\n")
 #         return print("Created")
 # def login(email,password):
-#     with open('accounts','r',encoding='utf-8') as account:
+#     with open('accounts.txt','r',encoding='utf-8') as account:
 #         #readline to read the line, and readlines to read every line
 #         readline = account.readlines()
 #         print(readline)
@@ -140,10 +142,10 @@ import os
 #   import pip, pip: package
 #       pip install (package_name): download a package
 #       pip show (package_name): information of the package
-import pip
+# import pip
 # import sys
 # print(sys.executable, sys.version)
-print
+
 # # 
 \
 \
@@ -193,3 +195,11 @@ print
 \
 \
 \
+import csv
+with open("account.txt","r") as f:
+    csv_reader = csv.reader(f)
+    for line in csv_reader:
+        # print(line)
+        name,username,email,password = line
+
+
