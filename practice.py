@@ -139,13 +139,57 @@ import os
 #       sys.version: python version
 #   import pip, pip: package
 #       pip install (package_name): download a package
-#       pip show (package_name): information of the
+#       pip show (package_name): information of the package
+import pip
+# import sys
+# print(sys.executable, sys.version)
+print
 # # 
 \
 \
 \
-import datetime
-today = datetime.datetime.now()
-#"%A": telling the week of the day
-extra_format = today.strftime("%A,")
-print(today)
+# import datetime
+# today = datetime.datetime.now()
+##"%A": telling the week of the day, like monday...
+##"%B": Name of the month
+##"%D": the day
+##"%Y": the year
+##"%I": hour
+##"%M": minute
+##"%p": Am or Pm
+# extra_format = today.strftime("%A,")
+# print(today)
+\
+\
+\
+\
+\
+#auto parsing and renaming of mutiple file
+# ####FAILED EXPEREMENT
+# import os
+# import re
+# print(os.getcwd())
+# # os.makedirs("osfile.txt")
+# os.chdir("\\Users\\YL\\GitHub\\new\\osfile.txt")
+# # os.makedirs("test1.txt"),os.makedirs("test2.txt"),os.makedirs("test3.txt")
+# for f in os.listdir():
+#     f = f.strip(".txt")
+#     print(f)
+#     f_name = ""
+#     f_num = ""
+#     for letters in f:
+#         if letters.isalpha:
+#             f_name.join(letters)
+#         elif letters.isdigit:
+#             f_num += letters
+
+#     f_name = f_name.join()
+#     f_num = f_num.join()
+#     #.format to make it a path
+#     print(f"{f_num}{f_name}".format)
+\
+\
+\
+\
+\
+\
