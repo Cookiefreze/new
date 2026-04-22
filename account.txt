@@ -1,3 +1,4 @@
+name, username, email, password
 name1, username1, user1@example.com, Pass1234!
 name2, username2, user2@example.com, SunRise2024#
 name3, username3, user3@example.com, BlueSky88$

@@ -195,11 +195,47 @@ import os
 \
 \
 \
-import csv
-with open("account.txt","r") as f:
-    csv_reader = csv.reader(f)
-    for line in csv_reader:
-        # print(line)
-        name,username,email,password = line
+# import csv
+# with open("account.txt", "r", encoding="utf-8", newline="") as f:
+#     # CSV NORMAL
+#     #csv.reader to read in your format
+#                                             #skipinitialspace to remove the space after the comma
+#     csv_reader = csv.reader(f, delimiter=",", skipinitialspace=True)
+#                                             #newline="" to prevent extra blank lines in output on Windows# you can use end="" to do the same thing
+#     with open("x2.txt", "w+", encoding="utf-8", newline="") as f2:
+#         # csv.writer("what file to import in", delimiter="what string would you put between them")
+#         csv_writer = csv.writer(f2, delimiter="\t")
+#         ## Delimiter \t writes tab-separated output.
+#         for line in csv_reader:
+#             csv_writer.writerow(line)
+#         f2.seek(0)#need to go back, or it will read from the end
+
+#         #this is where it sort and read the file as a dict
+#         csv_dictreader = csv.DictReader(f2,delimiter="\t")
+#         with open("x3.txt","w+",encoding="utf=8") as f3:
+#             field_name = ["name","username","email","password"]
+#                                             #You can use the original field name that it takes from the first line
+#             csv_Dictwriter = csv.DictWriter(f3,fieldnames=csv_dictreader.fieldnames,delimiter="\t")
+#             csv_Dictwriter.fieldnames
+#             csv_Dictwriter.writeheader()
+#             for lines in csv_dictreader:
+#                 #to take it off
+#                 del lines["email"]
+                #it doesnt take the header off and the delimiter, so you'll need to fix that
+#                 csv_Dictwriter.writerow(lines)
+\
+\
+\
+\
+\
+
+
+
+             
+
+            
+
+
+            
 
 

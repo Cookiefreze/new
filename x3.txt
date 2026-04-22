@@ -1,0 +1,11 @@
+name	username	email	password
+name1	username1		Pass1234!
+name2	username2		SunRise2024#
+name3	username3		BlueSky88$
+name4	username4		RiverFlow77!
+name5	username5		MoonLight55@
+name6	username6		GreenLeaf33#
+name7	username7		StarDust11$
+name8	username8		CloudNine99!
+name9	username9		FireSpark66@
+name10	username10		OceanWave44#
