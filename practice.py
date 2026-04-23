@@ -228,6 +228,19 @@ import os
 \
 \
 \
+import csv 
+with open("Cosmicinfo.txt","w+",encoding="utf-8") as cosmic_info:
+    fieldname = "name","age","hobbies"
+    yachiyiinfo = {"name": "yachiyo","age":"8000","hobbies":"sing",}
+    irohainfo = {"name":"iroha","age":"17","hobbies":"sing"}
+    kaguyainfo = {"name":"kaguya","age":"16"}
+    dict_reader = csv.DictReader(personnal)
+    dict_writer =csv.DictWriter(cosmic_info,fieldnames=fieldname,delimiter="\t")
+
+    for line in dict_reader:
+        print(line)
+        dict_writer.writerow(line)
+
 
 
 
