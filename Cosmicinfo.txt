@@ -1,0 +1,4 @@
+name	age	hobbies
+yachiyo	8000	sing
+iroha	17	sing
+kaguya	16	sing

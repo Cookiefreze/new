@@ -228,19 +228,36 @@ import os
 \
 \
 \
-import csv 
-with open("Cosmicinfo.txt","w+",encoding="utf-8") as cosmic_info:
-    fieldname = "name","age","hobbies"
-    yachiyiinfo = {"name": "yachiyo","age":"8000","hobbies":"sing",}
-    irohainfo = {"name":"iroha","age":"17","hobbies":"sing"}
-    kaguyainfo = {"name":"kaguya","age":"16"}
-    dict_reader = csv.DictReader(personnal)
-    dict_writer =csv.DictWriter(cosmic_info,fieldnames=fieldname,delimiter="\t")
-
-    for line in dict_reader:
-        print(line)
-        dict_writer.writerow(line)
-
+# import csv 
+# with open("Cosmicinfo.txt","w+",encoding="utf-8") as cosmic_info:
+#     fieldname = "name","age","hobbies"
+#     yachiyiinfo = {"name": "yachiyo","age":"8000","hobbies":"sing",}
+#     irohainfo = {"name":"iroha","age":"17","hobbies":"sing"}
+#     kaguyainfo = {"name":"kaguya","age":"16","hobbies":"sing"}
+#     infos = yachiyiinfo,irohainfo,kaguyainfo
+#     # infos = dict.values(infos)
+#     # print(infos)
+#     # dict_reader = csv.DictReader(infos,fieldnames=fieldname,)
+#     dict_writer =csv.DictWriter(cosmic_info,fieldnames=fieldname,delimiter="\t")
+#     dict_writer.writeheader()
+#     for line in infos:
+#         print(line)
+#         dict_writer.writerow(line)
+# import csv
+# with open("read_info.txt","w",encoding="utf-8")as reader:
+#     with open("Cosmicinfo.txt","r",encoding="utf-8")as info:
+#         #csv.Dictreader doesnt need fieldname
+#         info_csv = csv.DictReader(info,delimiter="\t")
+#         writer_csv = csv.DictWriter(reader,fieldnames=info_csv.fieldnames,delimiter=";")
+#         #next to skip a line in this situation
+#         name_age = []
+#         next(info_csv)
+#         for line in info_csv:
+#             #append to add item to list
+            
+#             name_age.append(f"{line['name']} {line['age']}")
+#             writer_csv.writerow(line)
+#             print(name_age)
 
 
 
