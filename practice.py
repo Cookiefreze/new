@@ -288,11 +288,11 @@ import datetime
                     #year, month, date, hour, minute, seconde, ms
 dt = datetime.datetime(2026,4,23,16,14,35,10000)
 #you can grab a groupe or individual attributes
-print(dt.date(),dt.time())
-import pytz
+# print(dt.date(),dt.time())
 
-
-
+import zoneinfo
+print(dt.astimezone())
+print(zoneinfo.ZoneInfo(datetime.datetime.now))
              
 
             
