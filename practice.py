@@ -285,15 +285,45 @@ import datetime
 # print(t.minute)
 
 #datetime.DATETIME()
+import zoneinfo
                     #year, month, date, hour, minute, seconde, ms
-dt = datetime.datetime(2026,4,23,16,14,35,10000)
+dt = datetime.datetime(2026,6,7,8,16,43,1000)
+#datetime.datetime.today() : using your local tz
+#datetime.datetime.now() : make you able to chose your tz, default is your timezone
+#datetime.datetime.utcnow() : using the utc that you are, it will input the date and time
+dt2 = datetime.datetime.now(tz=zoneinfo.ZoneInfo("EST"))
 #you can grab a groupe or individual attributes
 print(dt.date(),dt.time())
-import pytz
 
+#because now(i'm) we are in a depository, the utc is set at 00:00
+#you can make time change to what utc you want or city
+nyc_tz = zoneinfo.ZoneInfo("America/New_York")
+nyc_time = dt.astimezone(nyc_tz)
+print(nyc_time)
+#dt.tzinfo : get the tzinfo , Need to have a timezone
+print(dt.tzinfo)
+#zoneinfo.available_timezones(): to print all timezone
+# print(zoneinfo.available_timezones())
+#normal format : .isoformat()
+dt.isoformat
+#to print your format:
+##"%A": telling the week of the day, like monday...
+##"%B": Name of the month
+##"%D": The hole date d,m,y
+##"%d": the day
+##"%Y": the year
+##"%I": hour
+##"%M": minute
+##"%p": Am or Pm
+##"%z": time zone
+formated = dt.strftime("%d,%B %Y")
+print(formated)
+#convert a str to a date
+converted = datetime.datetime.strptime('07,June 2026', "%d,%B %Y")
+print(converted)
+#.strftime(): convert a date to a string
+#.strptime(): convert a string to a date
 
-
-             
 
             
 
