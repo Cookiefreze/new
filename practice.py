@@ -6,19 +6,19 @@ import os
 \
 \
 \
-##str = string
-##int = number with out decimal
-##Floats = number with decimal
-##list
-##tuples = tup()
-##list = []
-##sets = set{}
+# #str = string
+# #int = number with out decimal
+# #Floats = number with decimal
+# #list
+# #tuples = tup()
+# #list = []
+# #sets = set{}
 # list = [1,2,3,4,]
 # print(list)
-##CREATE FILE, DIR
-##os.getcwd : get file path
-##os.chdir : chose dir
-#print(os.getcwd())
+# #CREATE FILE, DIR
+# #os.getcwd : get file path
+# #os.chdir : chose dir
+# print(os.getcwd())
 # os.removedirs("you're/yuri")
 # os.makedirs("you're/yuri")
 # os.remove("you're.")
@@ -258,46 +258,45 @@ import os
 #             name_age.append(f"{line['name']} {line['age']}")
 #             writer_csv.writerow(line)
 #             print(name_age)
-##DATETIME
-import datetime
-# #datetime.DATE
-# d =datetime.date.today()
-# #d.year : year
-# #d.month : month
-# #d.day : day
-# #d.weekday() : the day of the week from 0:monday - 6:sunday
-# #d.isoweekday() : the day of the week from 1:monday - 7:sunday
-# print(d.isoweekday())
-# #date.timedelta(days='num'): add attribut to the num
-# tdelta = datetime.timedelta(days=7)
-# print(d - tdelta)
-# birthday = datetime.date(2026,7,16)
-# #day until birthday
-# delta_answer = birthday - d
-# #how many day left, 
-# #its a delta, so you could add compliment like days...
-# print(delta_answer.total_seconds())
-# #delta_answer.total_seconds() convert to total second
+\
+\
+\
+\
+\
+\
+# ##DATETIME
+# import datetime
+# # #datetime.DATE
+# # d =datetime.date.today()
+# # #d.year : year
+# # #d.month : month
+# # #d.day : day
+# # #d.weekday() : the day of the week from 0:monday - 6:sunday
+# # #d.isoweekday() : the day of the week from 1:monday - 7:sunday
+# # print(d.isoweekday())
+# # #date.timedelta(days='num'): add attribut to the num
+# # tdelta = datetime.timedelta(days=7)
+# # print(d - tdelta)
+# # birthday = datetime.date(2026,7,16)
+# # #day until birthday
+# # delta_answer = birthday - d
+# # #how many day left, 
+# # #its a delta, so you could add compliment like days...
+# # print(delta_answer.total_seconds())
+# # #delta_answer.total_seconds() convert to total second
 
-# #datetime.TIME()
-# #it give hour,minute,seconde, ms
-# t = datetime.time(16,36,23,10000)
-# print(t.minute)
-
-#datetime.DATETIME()
-                    #year, month, date, hour, minute, seconde, ms
-dt = datetime.datetime(2026,4,23,16,14,35,10000)
-#you can grab a groupe or individual attributes
-# print(dt.date(),dt.time())
-
-import zoneinfo
-print(dt.astimezone())
-print(zoneinfo.ZoneInfo(datetime.datetime.now))
-             
-
-            
+# # #datetime.TIME()
+# # #it give hour,minute,seconde, ms
+# # t = datetime.time(16,36,23,10000)
+# # print(t.minute)
 
 
-            
 
+#exception is for all error, you can add specific one's
+except Exception:
+    print("there is a prob")
+else:
+    print("no error")
+finally:
+    print("runned")
 
