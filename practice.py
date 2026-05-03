@@ -6,19 +6,19 @@ import os
 \
 \
 \
-##str = string
-##int = number with out decimal
-##Floats = number with decimal
-##list
-##tuples = tup()
-##list = []
-##sets = set{}
+# #str = string
+# #int = number with out decimal
+# #Floats = number with decimal
+# #list
+# #tuples = tup()
+# #list = []
+# #sets = set{}
 # list = [1,2,3,4,]
 # print(list)
-##CREATE FILE, DIR
-##os.getcwd : get file path
-##os.chdir : chose dir
-#print(os.getcwd())
+# #CREATE FILE, DIR
+# #os.getcwd : get file path
+# #os.chdir : chose dir
+# print(os.getcwd())
 # os.removedirs("you're/yuri")
 # os.makedirs("you're/yuri")
 # os.remove("you're.")
@@ -258,76 +258,166 @@ import os
 #             name_age.append(f"{line['name']} {line['age']}")
 #             writer_csv.writerow(line)
 #             print(name_age)
-##DATETIME
-import datetime
-# #datetime.DATE
-# d =datetime.date.today()
-# #d.year : year
-# #d.month : month
-# #d.day : day
-# #d.weekday() : the day of the week from 0:monday - 6:sunday
-# #d.isoweekday() : the day of the week from 1:monday - 7:sunday
-# print(d.isoweekday())
-# #date.timedelta(days='num'): add attribut to the num
-# tdelta = datetime.timedelta(days=7)
-# print(d - tdelta)
-# birthday = datetime.date(2026,7,16)
-# #day until birthday
-# delta_answer = birthday - d
-# #how many day left, 
-# #its a delta, so you could add compliment like days...
-# print(delta_answer.total_seconds())
-# #delta_answer.total_seconds() convert to total second
+\
+\
+\
+\
+\
+\
+# ##DATETIME
+# import datetime
+# # #datetime.DATE
+# # d =datetime.date.today()
+# # #d.year : year
+# # #d.month : month
+# # #d.day : day
+# # #d.weekday() : the day of the week from 0:monday - 6:sunday
+# # #d.isoweekday() : the day of the week from 1:monday - 7:sunday
+# # print(d.isoweekday())
+# # #date.timedelta(days='num'): add attribut to the num
+# # tdelta = datetime.timedelta(days=7)
+# # print(d - tdelta)
+# # birthday = datetime.date(2026,7,16)
+# # #day until birthday
+# # delta_answer = birthday - d
+# # #how many day left, 
+# # #its a delta, so you could add compliment like days...
+# # print(delta_answer.total_seconds())
+# # #delta_answer.total_seconds() convert to total second
 
-# #datetime.TIME()
-# #it give hour,minute,seconde, ms
-# t = datetime.time(16,36,23,10000)
-# print(t.minute)
+# # #datetime.TIME()
+# # #it give hour,minute,seconde, ms
+# # t = datetime.time(16,36,23,10000)
+# # print(t.minute)
 
-#datetime.DATETIME()
-import zoneinfo
-                    #year, month, date, hour, minute, seconde, ms
-dt = datetime.datetime(2026,6,7,8,16,43,1000)
-#datetime.datetime.today() : using your local tz
-#datetime.datetime.now() : make you able to chose your tz, default is your timezone
-#datetime.datetime.utcnow() : using the utc that you are, it will input the date and time
-dt2 = datetime.datetime.now(tz=zoneinfo.ZoneInfo("EST"))
-#you can grab a groupe or individual attributes
-print(dt.date(),dt.time())
+# #datetime.DATETIME()
+# import zoneinfo
+#                     #year, month, date, hour, minute, seconde, ms
+# dt = datetime.datetime(2026,6,7,8,16,43,1000)
+# #datetime.datetime.today() : using your local tz
+# #datetime.datetime.now() : make you able to chose your tz, default is your timezone
+# #datetime.datetime.utcnow() : using the utc that you are, it will input the date and time
+# dt2 = datetime.datetime.now(tz=zoneinfo.ZoneInfo("EST"))
+# #you can grab a groupe or individual attributes
+# print(dt.date(),dt.time())
 
-#because now(i'm) we are in a depository, the utc is set at 00:00
-#you can make time change to what utc you want or city
-nyc_tz = zoneinfo.ZoneInfo("America/New_York")
-nyc_time = dt.astimezone(nyc_tz)
-print(nyc_time)
-#dt.tzinfo : get the tzinfo , Need to have a timezone
-print(dt.tzinfo)
-#zoneinfo.available_timezones(): to print all timezone
-# print(zoneinfo.available_timezones())
-#normal format : .isoformat()
-dt.isoformat
-#to print your format:
-##"%A": telling the week of the day, like monday...
-##"%B": Name of the month
-##"%D": The hole date d,m,y
-##"%d": the day
-##"%Y": the year
-##"%I": hour
-##"%M": minute
-##"%p": Am or Pm
-##"%z": time zone
-formated = dt.strftime("%d,%B %Y")
-print(formated)
-#convert a str to a date
-converted = datetime.datetime.strptime('07,June 2026', "%d,%B %Y")
-print(converted)
-#.strftime(): convert a date to a string
-#.strptime(): convert a string to a date
+# #because now(i'm) we are in a depository, the utc is set at 00:00
+# #you can make time change to what utc you want or city
+# nyc_tz = zoneinfo.ZoneInfo("America/New_York")
+# nyc_time = dt.astimezone(nyc_tz)
+# print(nyc_time)
+# #dt.tzinfo : get the tzinfo , Need to have a timezone
+# print(dt.tzinfo)
+# #zoneinfo.available_timezones(): to print all timezone
+# # print(zoneinfo.available_timezones())
+# #normal format : .isoformat()
+# dt.isoformat
+# #to print your format:
+# ##"%A": telling the week of the day, like monday...
+# ##"%B": Name of the month
+# ##"%D": The hole date d,m,y
+# ##"%d": the day
+# ##"%Y": the year
+# ##"%I": hour
+# ##"%M": minute
+# ##"%p": Am or Pm
+# ##"%z": time zone
+# formated = dt.strftime("%d,%B %Y")
+# print(formated)
+# #convert a str to a date
+# converted = datetime.datetime.strptime('07,June 2026', "%d,%B %Y")
+# print(converted-)
+# #.strftime(): convert a date to a string
+# #.strptime(): convert a string to a date
+\
+\
+\
+\
+\
+\
+# #Variable 
+# #LEGB
+# #Local, Enclosing, Global, Built-in
+# #built-ins
+# import builtins
+# print(dir(builtins))
+# #global exemple
+# x = 'this is global'            
+# def Local():
+#     #to make it global :
+#     #global x(the variable)
+#     #Local exemple
+#     x = 'this is local'
+#     def Enclosing():
+#         #to use Enclosing:
+#         # nonlocal x
+#         #local x(variable)
+#         #Enclosing exemple
+#         print(x)
+#     Enclosing()
+#     print(x)
+# Local()
+# print(x)
+# # so local is something to his own function
+# #global is a variable outside of function
+# #enclosinf is the local variable of the fonction that he is in
+\
+\
+\
+\
+\
+\
+# # #SORT
+# # # li = [6,4,8,1,9,3,5]
+# # # tu = (3,8,4,0,5)
+# # # dic = {"age": "13","name":"bob","last_name":"y"}
+# # # li.sort()
+# # # #or
+# # # li_s = sorted(li,reverse=True)
+# # # #tuple and dict only work with sorted
+# # # dic_s = sorted(dic)
+# # # print(dic_s)
+# # #Absolut value
+# # li = [-2,-3,-4,1,5]
+# # #to read only the key, not negations 
+# # li.sort(key=abs)
+# # li_s = sorted(li,key=abs)
+# # print(li)
+# #CUSTOM SORTING
+# class employe():
+#     def __init__(self,name,age,salary):
+#         self.name = name
+#         self.age = age
+#         self.salary = salary
+#     def __repr__(self):
+#         return f"{self.name},{self.age},{self.salary}"
 
 
-            
+# e1 = employe("carl",13,2000)
+# e2 = employe("bob",14,3000)
+# e3 = employe("elli",12,1000)
+# employe = [e1,e2,e3]
 
+# def attribut(emp):
+#     return emp.age
+# from operator import attrgetter
+# s_employe = sorted(employe, key= attribut) or sorted(employe, key= lambda e: e.age) or sorted(employe, key= attrgetter("name"))
+# print(s_employe)
+\
+\
+\
+\
+\
+\
+\
+try:
+    print(''e)
 
-            
-
+#exception is for all error, you can add specific one's
+except Exception:
+    print("there is a prob")
+else:
+    print("no error")
+finally:
+    print("runned")
 
