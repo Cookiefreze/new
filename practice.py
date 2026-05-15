@@ -410,8 +410,8 @@ import os
 \
 \
 \
-# try:
-#     print(''e)
+try:
+    print(''e)
 
 # #exception is for all error, you can add specific one's
 # except Exception:
