@@ -445,5 +445,127 @@ finally:
 \
 \
 \
+# #__name__ and __main__
+# #__name__ will print file name that is running
+# #if its the main file(the file that you are running on), it will print main
+# print("file name:" , __name__)
+# #If you import it from another file, it will print the file name
+# \
+# #To confirm if the file is runned from the main, you can do this
+# import Test_name
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+# #unittest, Testing unit
+# import unittest
+# import calc
 
+# class calc(unittest.TestCase):
+#     def calc_add(self):
+#         result = 0
+\
+\
+\
+\
+\
+\
+# #RANDOM
+# import random
+# #to have a random number betwen 0 and 1(not inclusive)
+# r01 = random.random()
+# #number 1-10
+# r010 = random.uniform(1,10)
+# #number int betwen 1-10
+# r0010 = random.randint(1,10)
+# #To get one choice answer from str
+# cpk =["Kaguya","Iroha","Yachiyo"]
+# ranstr = random.choice(cpk)
+# # print(ranstr)
+# #To have a list of choice
+# ranstr10 = random.choices(cpk, k=10)
+# # print(ranstr10)
+# #And if you want to chose the probability
+# #weights = [first str,sceond str,...]
+# ranstr10prob = random.choices(cpk, weights=[20,10,5], k=10)
+# # print(ranstr10prob)
+# #To shufle number is
+# shuf = random.shuffle(cpk)
+# #To select special card and to not reselect
+# #Use Sample
+# samp = random.sample(cpk, k=3)
+# print(samp)
+\
+\
+\
+\
+\
+\
+\
+\
+# # #CLASS 
+# # #Class is a like a function that let you variable be able to set attribut
+# # class employee:
+# #     #__init__ is like the initial 
+# #     #you normaly use 
+# #     #U need to put self as the variable that is getting attribut
+# #     def __init__(self,first,last,pay):
+# #         #we call those instance
+# #         self.first = first
+# #         self.last = last
+# #         self.pay = pay
+# #     def fullname(self):
+# #         return f"{self.first} {self.last}"
+# # emp1 = employee("jaydon","gooner",6700)
+# # print(emp1.fullname())
+# # print(emp1.__dict__)
+# #So, the instance variable is the first to be talen then the class variable
+# class variable:
+#     #This is a class variable
+#     var1 = 1
+#     def __init__(self):
+        
+#         pass
+#     def my_value(self):
+#         return f"{self.var1} {variable.var1}" 
+# m1 = variable()
+# #This is a instance variable
+# m1.var1 = 2
+# print(m1.my_value())
+\
+\
+\
+\
+\
+\
+# #Closure
+# #quick recap
+# def outer(msg):
+#     message = msg
+#     def inner():
+#         print(message)
+#     return inner
+# #this makes the say_hi = inner, so you can run the function
+# #And the good part is that you can set diffrent attribut for each
+# say_hi = outer("hi")
+# say_bye = outer("bye")
+# #since can't instanly acces inner after closing the function
+# #you will need to do a closure
+# #It remembers the msg variable
+# say_hi()
+# say_bye()
+\
+\
+\
+\
+\
+\
+\
+pass
 
