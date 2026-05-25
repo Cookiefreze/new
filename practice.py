@@ -549,3 +549,43 @@ import os
 \
 \
 pass
+
+
+
+
+
+
+
+
+
+
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+import logging
+#There are 5 level of logging
+#You cant acces lower level, only higher 
+#DEBUG: Detailed information, only when probleme occure
+#INFO: confirmation that things are working as expected
+#WARNING: Indicate that something unexpected happened,or indicative of some problem in the near future(e.g. 'disk space low'). The software is still working a s expected.
+#Error: Due to a more serious problem, the software has not been able to prefore some function.
+#CRITICAl: A serious error that may indicate the program it self not even be able to continue runnnig
+logging.basicConfig(filename = "Log.txt",level = logging.INFO, format=None)
+
+
+class charater:
+    def __init__(self,age):
+
+        self.name = self
+        self.age =age
+
+bob = charater(15)
+#Please head to the file "character_log.py"
+print(bob.name)

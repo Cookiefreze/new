@@ -1,0 +1,1 @@
+INFO:root:<__main__.charater object at 0x724a2c1bf440>
