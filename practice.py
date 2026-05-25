@@ -410,16 +410,26 @@ import os
 \
 \
 \
+# # Try And Errror 
+# #try to try the code that you want to run
 # try:
-#     print(''e)
-
-# #exception is for all error, you can add specific one's
-# except Exception:
+#     print(e)
+# #exception is for all error
+# except Exception as prob:
 #     print("there is a prob")
+#     #print the error in simple format
+#     print(prob)
+# # specific error
+# except ValueError as te:
+#     #print something to the user
+#     print("the vallue isnt correct")
+# #if there is no error
 # else:
 #     print("no error")
+# #always execute, even if there is or not errors
 # finally:
 #     print("runned")
+\
 \
 \
 \
