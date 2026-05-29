@@ -551,6 +551,7 @@ import os
 # #It remembers the msg variable
 # say_hi()
 # say_bye()
+#it works in classes too
 \
 \
 \
@@ -558,7 +559,62 @@ import os
 \
 \
 \
-pass
+# #Decorators
+
+# def decorator_function(og_func):
+#     def wrapper_func(*args,**kwds):
+#         print(f"this executed before the function{og_func.__name__}")
+#         return og_func(*args,**kwds)
+#     return wrapper_func
+
+# class decorator_class(object):
+
+#     def __init__(self,og_func):
+#         self.func = og_func
+#     def __call__(self, *args, **kwds):
+#             print(f"this executed before the function{self.func.__name__}")
+#             return self.func(*args,**kwds) 
+
+        
+# @decorator_class
+# def display():
+#     print("hi")
+
+# @decorator_class
+# def display_info(name, age):
+#     print(f"the name is {name} and the age is {age}")
+# display()
+# display_info("Iroha",17)
+
+#Advance Decorator, you can find logging under this
+
+from functools import wraps
+def my_logger(og_func):
+    import logging
+    logging.basicConfig(filename=f"{og_func.__name__}.log", level= logging.INFO) 
+    @wraps(og_func)   
+    def wrapper(*args,**kwds):
+        logging.info(f"ran with {args}args and {kwds}")
+        return og_func(*args,**kwds)
+    return wrapper
+
+def timer(og_func):
+    import time
+    @wraps(og_func)   
+    def wrapper(*args,**kwds):
+        t1 = time.time()
+        result = og_func(*args,**kwds)
+        t2 = time.time() - t1
+        print(f"{og_func.__name__} runned in {t2} sec ")
+        return result
+    return wrapper
+@timer
+@my_logger
+def display_info(name:str,age:int):
+    import time
+    time.sleep(1)
+    print(f"my name is {name} and i'm {age}")
+display_info("Yachiyo",8000)
 
 
 
@@ -570,32 +626,46 @@ pass
 
 
 
-\
-\
-\
-\
-\
-\
-\
-\
-\
-import logging
-#There are 5 level of logging
-#You cant acces lower level, only higher 
-#DEBUG: Detailed information, only when probleme occure
-#INFO: confirmation that things are working as expected
-#WARNING: Indicate that something unexpected happened,or indicative of some problem in the near future(e.g. 'disk space low'). The software is still working a s expected.
-#Error: Due to a more serious problem, the software has not been able to prefore some function.
-#CRITICAl: A serious error that may indicate the program it self not even be able to continue runnnig
-logging.basicConfig(filename = "Log.txt",level = logging.INFO, format=None)
 
 
-class charater:
-    def __init__(self,age):
 
-        self.name = self
-        self.age =age
 
-bob = charater(15)
-#Please head to the file "character_log.py"
-print(bob.name)
+
+
+\
+\
+\
+\
+\
+\
+\
+\
+\
+# import logging
+# #There are 5 level of logging
+# #You can't acces lower level, only higher 
+# #DEBUG: Detailed information, only when probleme occure
+# #INFO: confirmation that things are working as expected
+# #WARNING: Indicate that something unexpected happened,or indicative of some problem in the near future(e.g. 'disk space low'). The software is still working a s expected.
+# #Error: Due to a more serious problem, the software has not been able to prefore some function.
+# #CRITICAl: A serious error that may indicate the program it self not even be able to continue runnnig
+# logging.basicConfig(filename = "Log.txt",level = logging.INFO, format=None)
+
+# \
+# \
+# \
+# \
+# \
+# \
+# \
+
+# class charater:
+#     def __init__(self,age):
+
+#         self.name = self
+#         self.age =age
+
+# bob = charater(15)
+# #Please head to the file "character_log.py"
+# import character_log
+# character_log.charater_config("yachiyo",8000, "singing")

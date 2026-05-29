@@ -1,1 +1,15 @@
 INFO:root:<__main__.charater object at 0x724a2c1bf440>
+Yachiyo is 8000 years old, and she likes sing
+Iroha is 17 years old, and she likes play game and Yachio
+Kaguya is 8000 years old, and she likes Iroha
+yachiyo is 8000 years old, and she likes singing
+Age cant be 0
+Traceback (most recent call last):
+  File "/workspaces/new/character_log.py", line 24, in __init__
+    100/age
+    ~~~^~~~
+ZeroDivisionError: division by zero
+Yachiyo is 0 years old, and she likes sing
+Iroha is 17 years old, and she likes play game and Yachio
+Kaguya is 8000 years old, and she likes Iroha
+yachiyo is 8000 years old, and she likes singing
