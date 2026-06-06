@@ -97,6 +97,7 @@ import os
 #         #strip() to remove all extra space of the end and start
 #         #replace("what do you want to replace", "with what")
 #         # "".join(text.split())   
+#         # dont use text.split(" "), since it will be something like "1","","2",... rather than "1","2"
 #         #.split() to make each word have a space and identifying each of them
 #         all = info.split()
         
@@ -586,41 +587,39 @@ import os
 # display()
 # display_info("Iroha",17)
 
-#Advance Decorator, you can find logging under this
+# # #Advance Decorator, you can find logging under this
 
-from functools import wraps
-def my_logger(og_func):
-    import logging
-    logging.basicConfig(filename=f"{og_func.__name__}.log", level= logging.INFO) 
-    @wraps(og_func)   
-    def wrapper(*args,**kwds):
-        logging.info(f"ran with {args}args and {kwds}")
-        return og_func(*args,**kwds)
-    return wrapper
+# # from functools import wraps
+# # def my_logger(og_func):
+# #     import logging
+# #     logging.basicConfig(filename=f"{og_func.__name__}.log", level= logging.INFO) 
+# #     @wraps(og_func)   
+# #     def wrapper(*args,**kwds):
+# #         logging.info(f"ran with {args}args and {kwds}")
+# #         return og_func(*args,**kwds)
+# #     return wrapper
 
-def timer(og_func):
-    import time
-    @wraps(og_func)   
-    def wrapper(*args,**kwds):
-        t1 = time.time()
-        result = og_func(*args,**kwds)
-        t2 = time.time() - t1
-        print(f"{og_func.__name__} runned in {t2} sec ")
-        return result
-    return wrapper
-@timer
-@my_logger
-def display_info(name:str,age:int):
-    import time
-    time.sleep(1)
-    print(f"my name is {name} and i'm {age}")
-display_info("Yachiyo",8000)
-
-
-
-
-
-
+# # def timer(og_func):
+# #     import time
+# #     @wraps(og_func)   
+# #     def wrapper(*args,**kwds):
+# #         t1 = time.time()
+# #         result = og_func(*args,**kwds)
+# #         t2 = time.time() - t1
+# #         print(f"{og_func.__name__} runned in {t2} sec ")
+# #         return result
+# #     return wrapper                     
+### a decorator in a decorator make the it looks like deco =timer(my_logger(display info))
+### because if you already have deco, the func name will be wrapper
+### so youll need to add @wraps before the wrapper to make it back with it name
+# # @timer
+# # @my_logger
+# # def display_info(name:str,age:int):
+# #     import time
+# #     time.sleep(1)
+# #     print(f"my name is {name} and i'm {age}")
+# # display_info("Yachiyo",8000)
+    
 
 
 
@@ -669,3 +668,171 @@ display_info("Yachiyo",8000)
 # #Please head to the file "character_log.py"
 # import character_log
 # character_log.charater_config("yachiyo",8000, "singing")
+# import character_log
+\
+\
+\
+\
+\
+\
+\
+\
+\
+# #Advance class method
+# class employee:
+#     grade = "employee"
+#     num_emp = 0
+#     raise_amt = 1.04
+#     def __init__(self,first_name,last_name,age, salary):
+#         self.first_name = first_name
+#         self.last_name = last_name
+#         self.age =age
+#         self.work_email = f"{last_name}{first_name}@work.com"
+#         self.salary = salary
+
+#     @property   
+#     def full_name(self):
+#         self.name = self.first_name +" "+ self.last_name
+    
+#     @full_name.setter
+#     def full_name(self,name):
+#         first,last = name.split(" ")
+#         self.first_name = first
+#         self.last_name = last
+
+#     @full_name.deleter
+#     def delete_name(self):
+#         self.first_name = None
+#         self.last_name = None
+
+        
+#     def apply_raise(self):
+#         self.salary = int(self.salary*self.raise_amt)
+#         return self.salary
+
+
+#     #a classmethod will change variable and instance in class
+#     @classmethod
+#     def set_raise_amount(cls, amount):
+#         cls.raise_amt = amount
+    
+#     @classmethod
+#     def from_string(cls, emp_str):
+#         # first_name,last_name,age,salary = emp_str.split(" ")
+#         return cls(*emp_str.split())
+#     #staticmethod is diffrent from class method since it does need the arguement self, or cls
+#     @staticmethod
+#     def work_day(day):
+#         if day.weekday == 5-6:
+#             return False
+#         else:
+#             return True
+#     def __repr__(self):
+#         return f"{self.grade} {self.first_name} {self.last_name}"
+#     def __str__(self):
+#         return f"{self.name}--{self.work_email}"
+
+# # class dev(employee):
+# #   grade = "devloper"  
+# #     def __init__(self, first_name, last_name, age, salary,coding_language):
+# #         super().__init__(first_name, last_name, age, salary)
+# #         self.coding_lang = coding_language
+# # class manager(employee):
+# #   grade = "manager"
+# #     def __init__(self, first_name, last_name, age, salary, employees=None):
+# #         super().__init__(first_name, last_name, age, salary)
+# #         if employees == None:
+# #             self.employees = []
+# #         else:
+# #             self.employees = employees
+# #     def add_managing_employee(self,employee):
+# #         if employee not in self.employees:
+# #              self.employees.append(employee)
+# #              return print(f"employee {employee} is added")
+# #         else:
+# #             return ValueError("employee already in;")
+# #     def remove_managing_employee(self,employee):
+# #         if employee in self.employees:
+# #             self.employees.remove(employee)
+# #         else: 
+# #             return ValueError("employee non existant")
+# #     def employee_managin(self):
+# #         for employee in self.employees:
+# #             print(f"-->   {employee.first_name}")
+# #     @classmethod
+# #     def from_string(cls, emp_str):
+# #         return super().from_string(emp_str)
+
+
+
+
+# emp1 = employee("Iroha","Sakayori",17,2000)
+# # emp2 = dev.from_string("Kaguya Kaguya 17 4000 python")
+# # emp3 = manager("Yachiyo","Runami",8000,80000,[emp1,emp2])
+
+# # emp3.employee_managin()
+# # import datetime
+# # print(employee.work_day(datetime.date.today()))
+
+# # print(emp3.remove_managing_employee("Mami"))
+
+# # print(isinstance(dev,manager))
+# # print(issubclass(dev, employee))
+# emp1.name = "Yachiyo Runami"
+# print(repr(emp1))
+# print(str(emp1))
+
+# # print(emp1)
+\
+\
+\
+\
+\
+\
+\
+\
+\
+#Unittest
+import unittest
+import calc
+# class Testcalc(unittest.TestCase):
+#         #You need to add test before the name of your method
+#     def test_add(self):
+#         result = calc.calc_add(1,2)
+#         self.assertEqual(result,3)
+#         self.assertEqual(calc.calc_add(1,1), 2)
+#     def test_mult(self):
+#         result = calc.calc_mutliply(1,1)
+#         self.assertEqual(result,1)
+#         self.assertEqual(calc.calc_mutliply(1,1), 1)
+#     def test_divide(self):
+#         self.assertEqual(calc.calc_divide(4,2), 2)
+#         self.assertRaises(ValueError, calc.calc_divide, 10,0)
+#         #or
+#         with self.assertRaise(ValueError):
+#             calc.calc_divide(10,0)
+    
+
+# #A dot means success
+# #A F means Failed
+
+
+# if __name__ == "__main__":
+#     unittest.main()
+
+
+
+
+#Advanced
+import character_log
+
+#you can't decide most of the order of the test
+#but only the setUp : start first
+#And Teardown: Last
+class Testcharacter_log(unittest.TestCase):
+    #set up and Teardwon
+
+    def setUp(self):
+        return super().setUp()
+    def tearDown(self):
+        return super().tearDown()
