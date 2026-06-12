@@ -792,47 +792,88 @@ import os
 \
 \
 \
-#Unittest
-import unittest
-import calc
-# class Testcalc(unittest.TestCase):
-#         #You need to add test before the name of your method
-#     def test_add(self):
-#         result = calc.calc_add(1,2)
-#         self.assertEqual(result,3)
-#         self.assertEqual(calc.calc_add(1,1), 2)
-#     def test_mult(self):
-#         result = calc.calc_mutliply(1,1)
-#         self.assertEqual(result,1)
-#         self.assertEqual(calc.calc_mutliply(1,1), 1)
-#     def test_divide(self):
-#         self.assertEqual(calc.calc_divide(4,2), 2)
-#         self.assertRaises(ValueError, calc.calc_divide, 10,0)
-#         #or
-#         with self.assertRaise(ValueError):
-#             calc.calc_divide(10,0)
+# #Unittest
+# import unittest
+# import calc
+# # class Testcalc(unittest.TestCase):
+# #         #You need to add test before the name of your method
+# #     def test_add(self):
+# #         result = calc.calc_add(1,2)
+# #         self.assertEqual(result,3)
+# #         self.assertEqual(calc.calc_add(1,1), 2)
+# #     def test_mult(self):
+# #         result = calc.calc_mutliply(1,1)
+# #         self.assertEqual(result,1)
+# #         self.assertEqual(calc.calc_mutliply(1,1), 1)
+# #     def test_divide(self):
+# #         self.assertEqual(calc.calc_divide(4,2), 2)
+# #         self.assertRaises(ValueError, calc.calc_divide, 10,0)
+# #         #or
+# #         with self.assertRaise(ValueError):
+# #             calc.calc_divide(10,0)
     
 
-# #A dot means success
-# #A F means Failed
+# # #A dot means success
+# # #A F means Failed
 
 
-# if __name__ == "__main__":
-#     unittest.main()
+# # if __name__ == "__main__":
+# #     unittest.main()
 
 
 
 
-#Advanced
-import character_log
+# #Advanced
+# import character_log
+# from unittest.mock import patch
+# #you can't decide most of the order of the test
+# #but only the setUp : start first
+# #And Teardown: Last
+# class Testcharacter_log(unittest.TestCase):
+#     #set up and Teardwon
 
-#you can't decide most of the order of the test
-#but only the setUp : start first
-#And Teardown: Last
-class Testcharacter_log(unittest.TestCase):
-    #set up and Teardwon
+#     def setUp(self):
+#         self.yachiyo = character_log.character_config("Yachiyo", 8000, ["to sing", "play with Iroha"])    
+#         print("setup")
+#     def tearDown(self):
+#         print("teardown")
+#     @classmethod
+#     def setUpClass(cls):
+#         print("start test")
+#     @classmethod
+#     def tearDownClass(cls):
+#         print("finished")
+    
+#     def test_name(self):
+#         self.assertEqual(self.yachiyo.name, "Yachiyo")
+#     def test_age(self):
+#         self.assertEqual(self.yachiyo.age, 8000)
+#     def test_hobby(self):
+#         self.assertEqual(self.yachiyo.hobby, ["to sing", "play with Iroha"])
+#     def test_web(self):
+#         with patch("character_log.requests.get") as mocked_get:
+#             mocked_get.return_value.ok = True
+#             mocked_get.return_value.text = "succes"
 
-    def setUp(self):
-        return super().setUp()
-    def tearDown(self):
-        return super().tearDown()
+#             web = self.yachiyo.web(8)
+#             mocked_get.assert_called_with("https://yuri.com/Yachiyo/8")
+
+#             self.assertEqual(web, "succes")
+
+#             mocked_get.return_value.ok = False
+#             web = self.yachiyo.web(8)
+#             mocked_get.assert_called_with("https://yuri.com/Yachiyo/8")
+
+#             self.assertEqual(web, "bad response")
+
+# unittest.main()
+\
+\
+\
+\
+\
+\
+\
+\
+\
+# HTTPS

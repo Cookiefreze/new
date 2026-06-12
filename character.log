@@ -83,3 +83,9 @@ Traceback (most recent call last):
     100/age
     ~~~^~~~
 ZeroDivisionError: division by zero
+ERROR:character_log:Age cant be 0
+Traceback (most recent call last):
+  File "/workspaces/new/character_log.py", line 24, in __init__
+    100/age
+    ~~~^~~~
+ZeroDivisionError: division by zero
