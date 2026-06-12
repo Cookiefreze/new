@@ -1,85 +1,18 @@
-<__main__.charater_config object at 0x7e225ab93260> is 8000 years old, and she likes sing
-<__main__.charater_config object at 0x7e225abda690> is 17 years old, and she likes play game and Yachio
-<__main__.charater_config object at 0x7e225aaa7f20> is 8000 years old, and she likes Iroha
-Yachiyo is 8000 years old, and she likes sing
-Iroha is 17 years old, and she likes play game and Yachio
-Kaguya is 8000 years old, and she likes Iroha
-Yachiyo is 8000 years old, and she likes sing
-Iroha is 17 years old, and she likes play game and Yachio
-Kaguya is 8000 years old, and she likes Iroha
-Yachiyo is 8000 years old, and she likes sing
-Iroha is 17 years old, and she likes play game and Yachio
-Kaguya is 8000 years old, and she likes Iroha
-Yachiyo is 8000 years old, and she likes sing
-Iroha is 17 years old, and she likes play game and Yachio
-Kaguya is 8000 years old, and she likes Iroha
-Yachiyo is 8000 years old, and she likes sing
-Iroha is 17 years old, and she likes play game and Yachio
-Kaguya is 8000 years old, and she likes Iroha
-INFO:__main__:Yachiyo is 8000 years old, and she likes sing
+ERROR:__main__:Age cant be 0
+Traceback (most recent call last):
+  File "/Users/admin/Documents/GitHub/new/character_log.py", line 24, in __init__
+    100/age
+ZeroDivisionError: division by zero
+INFO:__main__:Your charater age can't be 0
+INFO:__main__:Yachiyo is 0 years old, and she likes sing
 INFO:__main__:Iroha is 17 years old, and she likes play game and Yachio
 INFO:__main__:Kaguya is 8000 years old, and she likes Iroha
-INFO:character_log:Yachiyo is 8000 years old, and she likes sing
-INFO:character_log:Iroha is 17 years old, and she likes play game and Yachio
-INFO:character_log:Kaguya is 8000 years old, and she likes Iroha
-INFO:character_log:yachiyo is 8000 years old, and she likes singing
-INFO:__main__:Yachiyo is 8000 years old, and she likes sing
-INFO:__main__:Iroha is 17 years old, and she likes play game and Yachio
-INFO:__main__:Kaguya is 8000 years old, and she likes Iroha
-ERROR:__main__:Yachiyo is 0 years old, and she likes sing
-ERROR:__main__:Iroha is 17 years old, and she likes play game and Yachio
-ERROR:__main__:Kaguya is 8000 years old, and she likes Iroha
-ERROR:__main__:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 18, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:__main__:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 19, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:__main__:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:character_log:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:__main__:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:character_log:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:character_log:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:character_log:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
-ERROR:character_log:Age cant be 0
-Traceback (most recent call last):
-  File "/workspaces/new/character_log.py", line 24, in __init__
-    100/age
-    ~~~^~~~
-ZeroDivisionError: division by zero
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
