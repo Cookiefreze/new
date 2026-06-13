@@ -1,18 +1,1 @@
-ERROR:__main__:Age cant be 0
-Traceback (most recent call last):
-  File "/Users/admin/Documents/GitHub/new/character_log.py", line 24, in __init__
-    100/age
-ZeroDivisionError: division by zero
-INFO:__main__:Your charater age can't be 0
-INFO:__main__:Yachiyo is 0 years old, and she likes sing
-INFO:__main__:Iroha is 17 years old, and she likes play game and Yachio
-INFO:__main__:Kaguya is 8000 years old, and she likes Iroha
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
-INFO:character_log:Yachiyo is 8000 years old, and she likes to sing
+

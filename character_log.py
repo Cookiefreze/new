@@ -1,4 +1,5 @@
 import logging
+import requests
 #This make the logger a logging but on the file __name__
 logger = logging.getLogger(__name__)
 #This is where you will configurate the Handler
@@ -16,19 +17,26 @@ logger.addHandler(file_handler)
 #tho you can use logging. to input in the chat, since you didnt put any file,
 logger.addHandler(stream_handler)
 #
-class charater_config:
+class character_config:
     def __init__(self,name,age: int,hobby):
         self.age = age
         self.hobby = hobby
-        try: 
-            100/age
-        except ZeroDivisionError:
-            logger.exception("Age cant be 0")
+        self.name = name
+        
+        if age == 0:
+            logger.info("age can't be zero")
 
         logger.info(f"{name} is {age} years old, and she likes {hobby}")
+    def web(self, number):
+        web = requests.get(f"https://yuri.com/{self.name}/{number}")
+        if web.ok:
+            return web.text
+        else:
+            return "bad response"
+        
         
 
 
-Yachiyo = charater_config("Yachiyo",0,"sing")
-Iroha = charater_config("Iroha",17,"play game and Yachio")
-Kaguya = charater_config("Kaguya",8000,"Iroha")
+# Yachiyo = character_config("Yachiyo",0,"sing")
+# Iroha = character_config("Iroha",17,"play game and Yachio")
+# Kaguya = character_config("Kaguya",8000,"Iroha")
